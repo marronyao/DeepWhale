@@ -1,0 +1,4 @@
+# Mount the host entry so DeepSeek Harness discovers the browser client bundle.
+- insert:
+    - id: deepwhale-minimal-theme
+      name: dsh-deepwhale-minimal-theme
