@@ -1,11 +1,13 @@
 # DeepWhale Minimal Theme
 
-A minimal theme plugin for the DeepSeek Harness Web UI. It preserves the default layout, typography, and interactions while adding a restrained deep-blue accent and a compact whale-girl mascot above the account status in the lower-left sidebar without blocking the interface.
+A minimal theme plugin for the DeepSeek Harness Web UI. It preserves the default layout, typography, and interactions while adding a restrained deep-blue accent and a draggable whale-girl mascot above the account status in the lower-left sidebar.
 
 ## Features
 
 - Automatically follows the Harness light, dark, and system appearance settings
-- Uses a pointer-transparent mascot layer that does not interfere with conversations, the composer, or tool panels
+- Lets you drag the mascot anywhere in the window and remembers its position in the current browser
+- Double-clicks the mascot to restore its default lower-left position
+- Uses a clean transparent character asset without glow or drop-shadow effects
 - Hides the mascot on narrow screens and scales it down in short windows
 - Respects `prefers-reduced-motion`
 - Embeds the image during the build, with no remote asset requests at runtime
@@ -36,7 +38,7 @@ npm pack
 The generated `.tgz` package can be installed directly for testing:
 
 ```bash
-dsh plugin --profile web add ./dsh-deepwhale-minimal-theme-0.1.1.tgz
+dsh plugin --profile web add ./dsh-deepwhale-minimal-theme-0.1.2.tgz
 ```
 
 ## Publishing on GitHub
