@@ -41,7 +41,7 @@ body[data-ds-dark-theme] {
 .deepwhale-theme-stage::before {
   content: '';
   position: absolute;
-  right: -9rem;
+  left: -9rem;
   bottom: -10rem;
   width: 34rem;
   height: 34rem;
@@ -51,14 +51,14 @@ body[data-ds-dark-theme] {
 
 .deepwhale-theme-mascot {
   position: absolute;
-  right: clamp(0.5rem, 1.8vw, 1.75rem);
-  bottom: clamp(4.75rem, 9vh, 7.25rem);
-  width: clamp(10.5rem, 18vw, 17rem);
+  left: clamp(2rem, 5.7vw, 6.5rem);
+  bottom: clamp(4.75rem, 8vh, 6.25rem);
+  width: clamp(8rem, 9vw, 10rem);
   height: auto;
   object-fit: contain;
   opacity: 0.92;
   filter: drop-shadow(0 14px 28px rgba(30, 64, 130, 0.16));
-  transform-origin: bottom right;
+  transform-origin: bottom left;
   animation: deepwhale-arrive 520ms cubic-bezier(.2,.8,.2,1) both;
   user-select: none;
 }
@@ -73,12 +73,12 @@ body[data-ds-dark-theme] .deepwhale-theme-mascot {
 }
 
 @media (max-width: 900px), (max-height: 640px) {
-  .deepwhale-theme-mascot { width: 9.5rem; opacity: 0.72; }
+  .deepwhale-theme-mascot { width: 7.5rem; opacity: 0.72; }
 }
 
 @media (max-width: 640px) {
   .deepwhale-theme-mascot { display: none; }
-  .deepwhale-theme-stage::before { right: -18rem; }
+  .deepwhale-theme-stage::before { left: -18rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
