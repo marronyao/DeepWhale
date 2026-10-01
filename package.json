@@ -1,0 +1,63 @@
+{
+  "name": "dsh-deepwhale-minimal-theme",
+  "version": "0.1.0",
+  "description": "A minimal light and dark Deep Whale theme plugin for DeepSeek Harness.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets/mascot.png",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "assets": "node scripts/embed-assets.mjs",
+    "build": "npm run assets && tsdown",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/verify-package.mjs",
+    "check": "npm run typecheck && npm run build && npm test",
+    "pack:check": "npm pack --dry-run",
+    "prepack": "npm run check"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.0.0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "theme",
+    "light-theme",
+    "dark-theme",
+    "whale",
+    "mascot"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^18.3.3",
+    "react": "^18.3.1",
+    "tsdown": "^0.22.2",
+    "typescript": "^5.5.4"
+  }
+}
